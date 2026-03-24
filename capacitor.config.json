@@ -1,0 +1,29 @@
+{
+  "appId": "ai.revisense.app",
+  "appName": "ReViSense.Ai",
+  "webDir": "dist",
+  "server": {
+    "androidScheme": "https",
+    "cleartext": false
+  },
+  "ios": {
+    "contentInset": "automatic"
+  },
+  "android": {
+    "allowMixedContent": false
+  },
+  "plugins": {
+    "SplashScreen": {
+      "launchShowDuration": 3000,
+      "launchAutoHide": true,
+      "backgroundColor": "#FFFFFF",
+      "androidScaleType": "CENTER_CROP",
+      "androidSpinnerStyle": "large",
+      "spinnerColor": "#3B82F6",
+      "showSpinner": true,
+      "splashImmersive": true,
+      "layoutId": "launch_screen",
+      "useDialog": false
+    }
+  }
+}

@@ -1,0 +1,397 @@
+{
+  "splashScreens": {
+    "light": {
+      "ios": {
+        "background": "#FFFFFF",
+        "foreground": "#0E0D08",
+        "animation": {
+          "name": "gradient-fade-slide",
+          "duration": 3000,
+          "easing": "cubic-bezier(0.25, 0.46, 0.45, 0.94)",
+          "stages": [
+            {
+              "stage": "logo-fadeIn",
+              "from": 0,
+              "to": 800,
+              "opacity": "0 -> 1",
+              "scale": "0.8 -> 1",
+              "description": "Logo gracefully fades in with scale animation"
+            },
+            {
+              "stage": "text-slideUp",
+              "from": 400,
+              "to": 1200,
+              "translateY": "20px -> 0px",
+              "opacity": "0 -> 1",
+              "description": "App name slides up from bottom with fade"
+            },
+            {
+              "stage": "loading-bar-expand",
+              "from": 1000,
+              "to": 2200,
+              "width": "0% -> 100%",
+              "description": "Loading progress bar expands smoothly"
+            },
+            {
+              "stage": "glow-pulse",
+              "from": 1500,
+              "to": 3000,
+              "boxShadow": "light-pulse-effect",
+              "opacity": "0.5 -> 1 -> 0.5",
+              "description": "Soft glow pulse effect around logo"
+            },
+            {
+              "stage": "final-fade-transition",
+              "from": 2800,
+              "to": 3200,
+              "opacity": "1 -> 0",
+              "scale": "1 -> 1.05",
+              "description": "Smooth fade out with slight zoom"
+            }
+          ]
+        },
+        "particles": {
+          "enabled": true,
+          "count": 8,
+          "animation": {
+            "type": "floating",
+            "duration": 3000,
+            "path": "sine-wave",
+            "colors": ["#3B82F6", "#10B981", "#F59E0B"]
+          },
+          "description": "Subtle floating particles creating depth"
+        },
+        "linearGradient": {
+          "enabled": true,
+          "direction": "45deg",
+          "startColor": "#FFFFFF",
+          "endColor": "#F3F4F6",
+          "opacity": 0.3,
+          "description": "Subtle gradient background for visual depth"
+        }
+      },
+      "android": {
+        "background": "#FFFFFF",
+        "foreground": "#0E0D08",
+        "animation": {
+          "name": "material-hero-transition",
+          "duration": 3200,
+          "easing": "cubic-bezier(0.4, 0, 0.2, 1)",
+          "stages": [
+            {
+              "stage": "material-circle-ripple",
+              "from": 0,
+              "to": 1000,
+              "type": "ripple",
+              "color": "#3B82F6",
+              "intensity": "light-to-medium",
+              "description": "Material Design ripple effect emanating from center"
+            },
+            {
+              "stage": "logo-heroScaleRotate",
+              "from": 300,
+              "to": 1400,
+              "scale": "0.5 -> 1",
+              "rotate": "0deg -> 360deg",
+              "opacity": "0 -> 1",
+              "description": "Logo scales and rotates with hero animation"
+            },
+            {
+              "stage": "text-entrance",
+              "from": 900,
+              "to": 1600,
+              "translateY": "60px -> 0px",
+              "opacity": "0 -> 1",
+              "skewY": "-5deg -> 0deg",
+              "description": "Text enters with perspective skew"
+            },
+            {
+              "stage": "accent-bar-animation",
+              "from": 1200,
+              "to": 2000,
+              "scaleX": "0 -> 1",
+              "transformOrigin": "left",
+              "color": "gradient",
+              "description": "Accent bar expands with gradient color"
+            },
+            {
+              "stage": "loading-spinner",
+              "from": 1600,
+              "to": 3000,
+              "rotation": "continuous",
+              "speed": "1 rotation per 2s",
+              "color": "#3B82F6",
+              "strokeWidth": 3,
+              "description": "Smooth loading spinner rotation"
+            },
+            {
+              "stage": "glow-shimmer",
+              "from": 2000,
+              "to": 3200,
+              "effect": "shimmer",
+              "direction": "left-to-right",
+              "duration": 1200,
+              "repeat": 1,
+              "description": "Shimmer effect across the screen"
+            }
+          ]
+        },
+        "particles": {
+          "enabled": true,
+          "count": 12,
+          "type": "bubble",
+          "animation": {
+            "type": "float-and-pop",
+            "duration": 3200,
+            "colors": ["#3B82F6AA", "#10B981AA", "#F59E0BAA"],
+            "size": "4px-12px"
+          },
+          "description": "Floating bubble particles with material design"
+        },
+        "materialDesign": {
+          "enabled": true,
+          "elevation": 8,
+          "shadowColor": "rgba(0,0,0,0.1)"
+        }
+      }
+    },
+    "dark": {
+      "ios": {
+        "background": "#0E0D08",
+        "foreground": "#FFFFFF",
+        "animation": {
+          "name": "neon-glow-ascend",
+          "duration": 3000,
+          "easing": "cubic-bezier(0.34, 1.56, 0.64, 1)",
+          "stages": [
+            {
+              "stage": "neon-glow-appear",
+              "from": 0,
+              "to": 600,
+              "filter": "drop-shadow(0 0 0px #3B82F6) -> drop-shadow(0 0 20px #3B82F6)",
+              "opacity": "0 -> 1",
+              "description": "Logo appears with neon glow effect"
+            },
+            {
+              "stage": "logo-ascend",
+              "from": 200,
+              "to": 1200,
+              "translateY": "40px -> -20px",
+              "opacity": "0.5 -> 1",
+              "scale": "0.9 -> 1.05",
+              "description": "Logo ascends gracefully with glow intensification"
+            },
+            {
+              "stage": "text-glow-appear",
+              "from": 800,
+              "to": 1400,
+              "opacity": "0 -> 1",
+              "textShadow": "0 0 0px #3B82F6 -> 0 0 10px #3B82F6",
+              "scale": "0.95 -> 1",
+              "description": "Text appears with neon glow text shadow"
+            },
+            {
+              "stage": "gradient-bar-sweep",
+              "from": 1200,
+              "to": 2100,
+              "background": "linear-gradient(90deg, #3B82F6 0%, #10B981 50%, #F59E0B 100%)",
+              "width": "0% -> 100%",
+              "description": "Gradient bar sweeps across with vibrant colors"
+            },
+            {
+              "stage": "pulse-glow",
+              "from": 1500,
+              "to": 2800,
+              "boxShadow": "inset",
+              "glowIntensity": "0.5 -> 1 -> 0.5",
+              "color": "#3B82F6",
+              "description": "Pulsing glow effect around content"
+            },
+            {
+              "stage": "cosmic-fade",
+              "from": 2700,
+              "to": 3200,
+              "opacity": "1 -> 0",
+              "scale": "1.05 -> 0.95",
+              "filter": "blur(0px -> 5px)",
+              "description": "Fade to black with cosmic blur effect"
+            }
+          ]
+        },
+        "particles": {
+          "enabled": true,
+          "count": 15,
+          "animation": {
+            "type": "cosmic-drift",
+            "duration": 3000,
+            "path": "random-bezier",
+            "colors": ["#3B82F6", "#EC4899", "#10B981"],
+            "glowEffect": true,
+            "trailEffect": true
+          },
+          "description": "Cosmic particles with glow and trail effects"
+        },
+        "gradientOverlay": {
+          "enabled": true,
+          "type": "radial",
+          "colors": ["rgba(59, 130, 246, 0.1)", "rgba(14, 13, 8, 1)"],
+          "description": "Radial gradient overlay from center outward"
+        }
+      },
+      "android": {
+        "background": "#0E0D08",
+        "foreground": "#FFFFFF",
+        "animation": {
+          "name": "dark-mode-reveal",
+          "duration": 3200,
+          "easing": "cubic-bezier(0.45, 0, 0.55, 1)",
+          "stages": [
+            {
+              "stage": "dark-reveal-mask",
+              "from": 0,
+              "to": 800,
+              "type": "circle-mask-reveal",
+              "center": "center",
+              "radius": "0 -> viewport-diagonal/2",
+              "description": "Circle mask reveals content from center"
+            },
+            {
+              "stage": "neon-outline",
+              "from": 400,
+              "to": 1200,
+              "strokeColor": "#3B82F6",
+              "strokeWidth": "2 -> 4 -> 2",
+              "glowEffect": true,
+              "description": "Neon outline effect pulsing around logo"
+            },
+            {
+              "stage": "logo-neon-glow-in",
+              "from": 600,
+              "to": 1500,
+              "scale": "0.6 -> 1",
+              "opacity": "0 -> 1",
+              "boxShadow": "0 0 10px #3B82F6, 0 0 20px #3B82F250",
+              "description": "Logo glows in with neon effect"
+            },
+            {
+              "stage": "text-neon-appear",
+              "from": 1100,
+              "to": 1800,
+              "opacity": "0 -> 1",
+              "color": "#FFFFFF -> #FFFFFF",
+              "textShadow": "0 0 10px #3B82F6, 0 0 20px #3B82F280",
+              "letterSpacing": "4px",
+              "description": "Text appears with neon glow effect"
+            },
+            {
+              "stage": "gradient-lines",
+              "from": 1400,
+              "to": 2200,
+              "type": "animated-lines",
+              "colors": ["#3B82F6", "#10B981", "#F59E0B"],
+              "direction": "diagonal",
+              "strokeWidth": 2,
+              "opacity": "0 -> 1 -> 0.5",
+              "description": "Animated gradient lines sweep diagonally"
+            },
+            {
+              "stage": "loading-ring-spinner",
+              "from": 1800,
+              "to": 3200,
+              "type": "spinner",
+              "variant": "ring",
+              "color": "#3B82F6",
+              "strokeWidth": 4,
+              "radius": 40,
+              "rotation": "continuous"
+            },
+            {
+              "stage": "final-neon-fade",
+              "from": 3000,
+              "to": 3200,
+              "opacity": "1 -> 0",
+              "glowEffect": "1 -> 0",
+              "description": "Neon glow fades out smoothly"
+            }
+          ]
+        },
+        "particles": {
+          "enabled": true,
+          "count": 20,
+          "type": "neon-spark",
+          "animation": {
+            "type": "explosion-and-float",
+            "duration": 3200,
+            "startDelay": 800,
+            "colors": ["#3B82F6", "#10B981", "#EC4899"],
+            "glowColor": "same-as-particle",
+            "size": "2px-8px",
+            "speed": "slow-to-fast-decay"
+          },
+          "description": "Neon spark particles with glow"
+        },
+        "decoElements": {
+          "enabled": true,
+          "elements": [
+            {
+              "type": "diagonal-lines",
+              "color": "#3B82F644",
+              "spacing": 20,
+              "angle": 45
+            },
+            {
+              "type": "top-accent-bar",
+              "color": "gradient(#3B82F6, #10B981)",
+              "height": 4,
+              "animation": "sweep-left-to-right"
+            }
+          ]
+        }
+      }
+    }
+  },
+  "configuration": {
+    "general": {
+      "displayDuration": 3000,
+      "fadeDuration": 300,
+      "imageScaleFactor": 1,
+      "showLoadingSpinner": true,
+      "spinnerStyle": "modern-ring",
+      "transitionBehavior": "smooth-fade"
+    },
+    "colors": {
+      "primary": "#3B82F6",
+      "success": "#10B981",
+      "warning": "#F59E0B",
+      "danger": "#EF4444",
+      "lightBackground": "#FFFFFF",
+      "darkBackground": "#0E0D08"
+    },
+    "fonts": {
+      "family": "System, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto'",
+      "lightMode": {
+        "size": 28,
+        "weight": 700,
+        "color": "#0E0D08"
+      },
+      "darkMode": {
+        "size": 28,
+        "weight": 700,
+        "color": "#FFFFFF"
+      }
+    },
+    "performance": {
+      "useHardwareAcceleration": true,
+      "enableGPURendering": true,
+      "optimizeForLowEndDevices": false,
+      "useAnimationFrames": true
+    }
+  },
+  "metadata": {
+    "version": "2.0",
+    "lastUpdated": "2026-03-24",
+    "app": "ReViSense.Ai",
+    "author": "ReViSense Development Team",
+    "description": "Professional splash screen animations for iOS and Android with advanced effects"
+  }
+}
