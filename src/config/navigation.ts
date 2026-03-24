@@ -1,0 +1,92 @@
+import {
+  LayoutDashboard,
+  Users,
+  Calendar,
+  DollarSign,
+  Settings,
+  ClipboardCheck,
+  BookOpen,
+  FileText,
+  Brain,
+  Home,
+  Bell,
+  Bus,
+  User,
+  Shield,
+  AlertTriangle,
+  BarChart3,
+  Lock,
+  Eye,
+  UserPlus,
+  Clock,
+  CheckSquare,
+  Award,
+  Library,
+  Bell as BellIcon,
+  Download,
+} from 'lucide-react';
+
+export const adminNav = [
+  { label: 'Dashboard', icon: LayoutDashboard, path: '/admin' },
+  { label: 'Profile', icon: User, path: '/admin/profile' },
+  { label: 'Create Teacher', icon: UserPlus, path: '/admin/create-teacher' },
+  { label: 'Users', icon: Users, path: '/admin/users' },
+  { label: 'Attendance Approvals', icon: ClipboardCheck, path: '/admin/attendance-approvals' },
+  { label: 'Raise Support Tickets', icon: AlertTriangle, path: '/admin/raise-tickets' },
+  { label: 'E-Library', icon: Library, path: '/admin/e-library' },
+  { label: 'Download Data', icon: Download, path: '/admin/download-data' },
+  { label: 'Fees', icon: DollarSign, path: '/admin/fees' },
+  { label: 'Calendar', icon: Calendar, path: '/admin/calendar' },
+  { label: 'Settings', icon: Settings, path: '/admin/settings' },
+];
+
+export const teacherNav = [
+  { label: 'Dashboard', icon: LayoutDashboard, path: '/teacher' },
+  { label: 'Profile', icon: User, path: '/teacher/profile' },
+  { label: 'Create Student', icon: UserPlus, path: '/teacher/create-student' },
+  { label: 'Attendance', icon: ClipboardCheck, path: '/teacher/attendance' },
+  { label: 'Attendance Report', icon: FileText, path: '/teacher/attendance-report' },
+  { label: 'Marks', icon: FileText, path: '/teacher/marks' },
+  { label: 'Homework', icon: BookOpen, path: '/teacher/homework' },
+  { label: 'Work & Attendance', icon: Clock, path: '/teacher/worklog' },
+  { label: 'Student Groups', icon: Users, path: '/teacher/groups' },
+  { label: 'AI Tools', icon: Brain, path: '/teacher/ai' },
+];
+
+export const studentNav = [
+  { label: 'Home', icon: Home, path: '/student' },
+  { label: 'TimeTable', icon: Clock, path: '/student/timetable' },
+  { label: 'My Attendance', icon: CheckSquare, path: '/student/attendance' },
+  { label: 'Calendar', icon: Calendar, path: '/student/calendar' },
+  { label: 'AI Buddy', icon: Brain, path: '/student/ai' },
+  { label: 'Marks & Performance', icon: Award, path: '/student/marks' },
+  { label: 'Homework', icon: BookOpen, path: '/student/homework' },
+  { label: 'Resources', icon: Library, path: '', isSection: true },
+  { label: 'Study Materials', icon: BookOpen, path: '/student/study-materials' },
+  { label: 'Communications', icon: BellIcon, path: '', isSection: true },
+  { label: 'Notices/Circulars', icon: Bell, path: '/student/notices' },
+];
+
+export const parentNav = [
+  { label: 'Dashboard', icon: LayoutDashboard, path: '/parent' },
+  { label: 'Profile', icon: User, path: '/parent/profile' },
+  { label: 'Children', icon: Users, path: '/parent/children' },
+  { label: 'Fees', icon: DollarSign, path: '/parent/fees' },
+  { label: 'Bus', icon: Bus, path: '/parent/bus' },
+  { label: 'Notifications', icon: Bell, path: '/parent/notifications' },
+];
+
+export const superAdminNav = [
+  { label: 'Control Center', icon: LayoutDashboard, path: '/superadmin' },
+  { label: 'Profile', icon: User, path: '/superadmin/profile' },
+  { label: 'Create Admin', icon: UserPlus, path: '/superadmin/create-admin' },
+  { label: 'Admin Supervision', icon: Eye, path: '/superadmin/admin-supervision' },
+  { label: 'Teacher Supervision', icon: Eye, path: '/superadmin/teacher-supervision' },
+  { label: 'Student Supervision', icon: Eye, path: '/superadmin/student-supervision' },
+  { label: 'Parent Supervision', icon: Eye, path: '/superadmin/parent-supervision' },
+  { label: 'Ticket Management', icon: AlertTriangle, path: '/superadmin/ticket-management' },
+  { label: 'System Logs', icon: FileText, path: '/superadmin/system-logs' },
+  { label: 'Analytics', icon: BarChart3, path: '/superadmin/analytics' },
+  { label: 'Security', icon: Lock, path: '/superadmin/security' },
+  { label: 'Settings', icon: Settings, path: '/superadmin/settings' },
+];
