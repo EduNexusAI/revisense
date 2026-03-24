@@ -79,9 +79,9 @@ export const LoginPage = () => {
                     key={role.id}
                     type="button"
                     onClick={() => setSelectedRole(role.id)}
-                    className={`px-2 sm:px-4 py-2 sm:py-3 rounded-8 sm:rounded-12 font-medium text-xs sm:text-sm transition-all duration-200 relative overflow-hidden ${
+                    className={`px-2 sm:px-4 py-2 sm:py-3 rounded-20 sm:rounded-24 font-medium text-xs sm:text-sm transition-all duration-200 relative overflow-hidden ${
                       selectedRole === role.id
-                        ? 'bg-gradient-to-br from-blue-600 via-blue-650 to-blue-700 text-white shadow-soft hover:shadow-medium border border-blue-500/50 before:absolute before:inset-0 before:rounded-8 sm:before:rounded-12 before:bg-gradient-to-b before:from-white/15 before:to-transparent before:pointer-events-none'
+                        ? 'bg-gradient-to-br from-blue-600 via-blue-650 to-blue-700 text-white shadow-soft hover:shadow-medium border border-blue-500/50 before:absolute before:inset-0 before:rounded-20 sm:before:rounded-24 before:bg-gradient-to-b before:from-white/15 before:to-transparent before:pointer-events-none'
                         : 'bg-slate-100 text-slate-700 border border-slate-300 hover:border-slate-400 hover:bg-slate-50'
                     }`}
                   >
