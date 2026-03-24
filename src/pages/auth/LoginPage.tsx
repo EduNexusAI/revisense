@@ -26,13 +26,30 @@ const ROLE_ROUTES: Record<string, string> = {
 
 export const LoginPage = () => {
   const { t } = useTranslation();
-  const [selectedRole, setSelectedRole] = useState(ROLES.ADMIN);
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 640);
+  const [selectedRole, setSelectedRole] = useState(window.innerWidth < 640 ? ROLES.STUDENT : ROLES.ADMIN);
   const [email, setEmail] = useState('admin@revisense.com');
   const [password, setPassword] = useState('demo');
   const [superAdminModalOpen, setSuperAdminModalOpen] = useState(false);
 
   const navigate = useNavigate();
   const { login, isLoading, isAuthenticated, user } = useAuthStore();
+
+  // Detect screen size changes
+  useEffect(() => {
+    const handleResize = () => {
+      const mobile = window.innerWidth < 640;
+      setIsMobile(mobile);
+      if (mobile && selectedRole === ROLES.ADMIN) {
+        setSelectedRole(ROLES.STUDENT);
+      } else if (!mobile && selectedRole === ROLES.STUDENT) {
+        setSelectedRole(ROLES.ADMIN);
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, [selectedRole]);
 
   // Navigate once auth state updates (reliable)
   useEffect(() => {
