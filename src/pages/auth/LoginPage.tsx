@@ -70,7 +70,7 @@ export const LoginPage = () => {
           <form onSubmit={handleLogin} className="space-y-4 sm:space-y-6">
             {/* Role Selector for Regular Roles */}
             <div>
-              <label className="block text-center text-xs sm:text-sm font-semibold text-gray-900 mb-3 sm:mb-4">
+              <label className="block text-center text-xs sm:text-sm font-bold text-gray-900 mb-3 sm:mb-4">
                 {t('select_role')}
               </label>
               <div className="grid grid-cols-2 gap-2 sm:gap-3">
@@ -79,7 +79,7 @@ export const LoginPage = () => {
                     key={role.id}
                     type="button"
                     onClick={() => setSelectedRole(role.id)}
-                    className={`px-2 sm:px-4 py-3 sm:py-4 rounded-full font-semibold text-xs sm:text-sm transition-all duration-300 relative overflow-hidden backdrop-blur-sm ${
+                    className={`px-2 sm:px-4 py-3 sm:py-4 rounded-full font-bold text-xs sm:text-sm transition-all duration-300 relative overflow-hidden backdrop-blur-sm ${
                       selectedRole === role.id
                         ? 'bg-gradient-to-br from-blue-500 via-blue-600 to-blue-700 text-white shadow-xl hover:shadow-2xl border border-blue-400/60 hover:border-blue-300 transform hover:scale-105 before:absolute before:inset-0 before:rounded-full before:bg-gradient-to-b before:from-white/20 before:to-transparent before:pointer-events-none'
                         : 'bg-gradient-to-br from-slate-50 to-slate-100 text-slate-700 border-2 border-slate-200 hover:border-slate-400 hover:bg-slate-100 transition-all hover:shadow-lg'
