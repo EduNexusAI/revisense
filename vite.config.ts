@@ -1,9 +1,12 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
 
+// Set base path based on deployment environment
+const base = process.env.VITE_BASE_PATH || '/';
+
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: '/revisense/',
+  base: base,
   plugins: [react()],
   optimizeDeps: {
     exclude: ['lucide-react'],
